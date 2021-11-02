@@ -203,14 +203,13 @@ p {
     /*-------- HOME --------*/
 
     .jl-display-text {
-        margin-top: 9%;
+        margin-top: 10%;
     }
 
     #jl-home-presentation {
         background-image: url('../images/joao-lemon-designer-home.png');
         background-repeat: no-repeat;
-        background-position: 60% bottom;
-        background-size: 55%;
+        background-position: 50% bottom;
         position: relative;
     }
 
@@ -326,6 +325,59 @@ p {
 
 @media screen and (min-width: 1600px){
     
+}
+
+/*-------- BUTTONS --------*/
+
+.jl-btn {
+    display: table;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.jl-btn-sm {
+    height: 28px;
+    padding: 0 20px;
+    border-radius: 14px;
+    font-size: 11px;
+}
+
+.jl-btn-md {
+    height: 38px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+
+.jl-btn-lg {
+    height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+.jl-btn-green {
+    background-color: #2ccb69;
+    color: #1c1c1c;
+}
+
+.jl-btn-green:hover {
+    background-color: #068737;
+    color: #fff;
+}
+
+.jl-btn-dark {
+    background-color: #151515;
+    color: #2ccb69;
+}
+
+.jl-btn-dark:hover {
+    background-color: #2f2f2f;
+    color: #fff;
 }
 
 /*-------- UTILITY CLASSES --------*/
