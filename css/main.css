@@ -6,7 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-p {
+p, label {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -107,14 +107,14 @@ p {
         padding: 30px;
         border-radius: 0 30px 30px 30px;
         position: fixed;
-        top: 15%;
+        top: 5%;
         left: 0;
         right: 0;
         margin: 0 auto;
         z-index: 1200;
     }
 
-    .jl-modal-header {
+    .jl-modal-header, .jl-modal-body, .jl-form {
         width: 100%;
         display: table;
         position: relative;
@@ -133,6 +133,26 @@ p {
         right: -15px;
         border: none;
         background-color: #4d4c4c;
+    }
+
+    .jl-form label {
+        margin-bottom: 10px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .jl-field, .jl-textarea {
+        width: 100%;
+        background-color: #2f2f2f;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    .jl-field {
+        height: 45px;
     }
 
     .jl-topbar{
@@ -248,13 +268,14 @@ p {
     /*-------- HOME --------*/
 
     .jl-display-text {
-        margin-top: 10%;
+        margin-top: 9%;
     }
 
     #jl-home-presentation {
         background-image: url('../images/joao-lemon-designer-home.png');
         background-repeat: no-repeat;
-        background-position: 50% bottom;
+        background-position: 60% bottom;
+        background-size: 58%;
         position: relative;
     }
 
@@ -382,6 +403,11 @@ p {
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-out;
+}
+
+.jl-btn-block {
+    width: 100%;
+    display: block;
 }
 
 .jl-btn-sm {

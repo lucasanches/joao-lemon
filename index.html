@@ -28,15 +28,52 @@
 
     <div class="jl-modal jl-bg-black">
         <div class="jl-modal-header">
-            <h1 class="jl-title jl-text-green">Solicite um Orçamento</h1>
+            <h1 class="jl-title jl-text-green">Solicite um orçamento</h1>
             <button class="jl-close-modal">X</button>
         </div>
         <div class="jl-modal-body">
-            <p class="jl-text-light">Por favor informe os dados abaixo e eu entrarei em contato com você o mais breve
-                possível.</p>
-            <form class="jl-form">
-                <input type="text" name="Nome" id="jl-nome" class="jl-field" />
-            </form>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="jl-text-light">Por favor informe os dados abaixo e eu entrarei em contato com você o mais
+                        breve
+                        possível.
+                    </p>
+                </div>
+            </div>
+            <div class="row jl-mar-top-15">
+                <div class="col-sm-12">
+                    <form class="jl-form">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label for="Nome" class="jl-text-light">Nome</label>
+                                <input type="text" name="Nome" id="jl-nome" class="jl-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label for="E-mail" class="jl-text-light">E-mail</label>
+                                <input type="email" name="E-mail" id="jl-email" class="jl-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label for="Telefone" class="jl-text-light">Telefone</label>
+                                <input type="tel" name="Telefone" id="jl-telefone" class="jl-field" />
+                            </div>
+                            <div class="col-sm-12 col-md-6 jl-mar-bottom-15">
+                                <label for="Site" class="jl-text-light">Site</label>
+                                <input type="text" name="Site" id="jl-site" class="jl-field" />
+                            </div>
+                            <div class="col-sm-12 jl-mar-top-15 jl-mar-bottom-15">
+                                <label for="Mensagem" class="jl-text-light">Descreva abaixo o projeto para realização do
+                                    orçamento:</label>
+                                <textarea name="Mensagem" id="jl-message" rows="8" class="jl-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end jl-mar-top-15">
+                            <div class="col-sm-12 col-md-6">
+                                <button class="jl-btn jl-btn-block jl-btn-lg jl-btn-green">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
