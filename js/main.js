@@ -1,5 +1,6 @@
 //Variable
 var btnContact = document.querySelector('.jl-btn-contact');
+var toggleModal = document.querySelectorAll('.jl-toggle-modal');
 
 //Page preloader
 window.addEventListener('load', function () {
@@ -17,3 +18,15 @@ btnContact.addEventListener('click', function () {
     boxContact.classList.toggle('jl-is-open');
     this.classList.toggle('jl-change-icon');
 });
+
+//Opening and closing modal quote 
+for (var i = 0; i < toggleModal.length; i++) {
+    toggleModal[i].addEventListener('click', function () {
+        var overlay = document.querySelector('.jl-overlay');
+        var modalQuote = document.querySelector('#jl-modal-quote');
+
+        overlay.classList.toggle('jl-is-open');
+        modalQuote.classList.toggle('jl-is-open');
+        modalQuote.classList.toggle('jl-slide-top-in');
+    });
+}
