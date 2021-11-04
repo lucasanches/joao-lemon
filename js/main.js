@@ -30,3 +30,13 @@ for (var i = 0; i < toggleModal.length; i++) {
         modalQuote.classList.toggle('jl-slide-top-in');
     });
 }
+
+//Scroll animation
+var myScrollDown = document.querySelector('.jl-scroll-down');
+var waypoint = new Waypoint({
+    element: myScrollDown,
+    handler: function () {
+        myScrollDown.classList.toggle('jl-fade-out');
+    },
+    offset: '70%'
+})
