@@ -336,6 +336,51 @@ p, label {
         animation: lineDown 1.2s ease-out infinite;
         transform-origin: top center;
     }
+
+    /*-------- HOME - PORTFOLIO --------*/
+
+    .jl-portfolio-navigator {
+        width: 145px;
+        height: 400px;
+        display: table;
+        background-color: red;
+        position: absolute;
+        left: 0;
+        top: 20vh;
+    }
+
+    .jl-item-counter {
+        width: 100%;
+        height: 75px;
+        display: block;
+        background-color: blue;
+        margin-bottom: 60px;
+    }
+
+    .jl-item-navigator {
+        width: 100%;
+        display: table;
+        background-color: greenyellow;
+    }
+
+    .jl-item-navigator a {
+        width: 20px;
+        height: 1px;
+        background-color: purple;
+        display: block;
+        margin-bottom: 58px;
+    }
+
+    .jl-item-navigator a:last-child {
+        margin-bottom: 30px;
+    }
+
+    .jl-portfolio-next-prev {
+        width: 100%;
+        height: 45px;
+        background-color: salmon;
+        display: block;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -399,7 +444,21 @@ p, label {
 }
 
 @media screen and (min-width: 1600px){
-    
+
+    /*-------- HOME - PORTFOLIO --------*/
+
+    .jl-item-counter {
+        width: 100%;
+        height: 90px;
+        display: block;
+    }
+
+    .jl-item-navigator a {
+        width: 20px;
+        height: 1px;
+        display: block;
+        margin-bottom: 80px;
+    }  
 }
 
 /*-------- BUTTONS --------*/
@@ -539,10 +598,15 @@ p, label {
 
 .jl-full-height {
     height: 100vh;
+    position: relative;
 }
 
 .jl-full-height {
     height: calc(100vh - 30px);
+}
+
+.jl-no-pad {
+    padding: 0 !important;
 }
 
 /*-------- BEHAVIOR CLASSES --------*/
