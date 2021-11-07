@@ -340,46 +340,68 @@ p, label {
     /*-------- HOME - PORTFOLIO --------*/
 
     .jl-portfolio-navigator {
-        width: 145px;
+        width: 130px;
         height: 400px;
         display: table;
-        background-color: red;
         position: absolute;
         left: 0;
-        top: 20vh;
+        top: 24vh;
     }
 
     .jl-item-counter {
         width: 100%;
         height: 75px;
         display: block;
-        background-color: blue;
-        margin-bottom: 60px;
+        margin-bottom: 45px;
+        position: relative;
+    }
+
+    .jl-item-counter:before {
+        content: '';
+        display: block;
+        width: 29px;
+        height: 100%;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 3px;
+        left: 0;
+    }
+
+    .jl-item-counter span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100px;
+        line-height: 75px;
+        font-weight: 600;
     }
 
     .jl-item-navigator {
         width: 100%;
         display: table;
-        background-color: greenyellow;
     }
 
     .jl-item-navigator a {
         width: 20px;
         height: 1px;
-        background-color: purple;
         display: block;
-        margin-bottom: 58px;
+        margin: 0 0 50px 23px;
+        background-color: #4d4d4d;
+    }
+
+    .jl-item-navigator a.jl-item-active {
+        width: 82px;
+        background-color: #2ccb69;
     }
 
     .jl-item-navigator a:last-child {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
 
     .jl-portfolio-next-prev {
         width: 100%;
         height: 45px;
-        background-color: salmon;
         display: block;
+        background-color: #2c2c2c;
+        border-radius: 0 23px 23px 0;
     }
 }
 
