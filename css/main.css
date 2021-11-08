@@ -429,6 +429,25 @@ p, label {
     ion-icon {
         font-size: 25px;
     }
+
+    .jl-slider-container {
+        width: 100%;
+        background-color: white;
+    }
+
+    .jl-slider-list {
+        width: auto;
+        height: 600px;
+        display: block;
+        background-color: orange;
+        list-style: none;
+    }
+
+    .jl-slider-item {
+        width: 500px;
+        height: 500px;
+        display: inline-block;
+    }
 }
 
 @media screen and (min-width: 576px){
@@ -665,6 +684,26 @@ p, label {
 .jl-no-radius-right {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
 }
 
 /*-------- BEHAVIOR CLASSES --------*/
