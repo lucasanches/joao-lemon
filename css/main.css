@@ -431,7 +431,8 @@ p, label {
     }
 
     .jl-slider-container {
-        width: 100%;
+        display: block;
+        overflow: hidden;
         background-color: white;
     }
 
@@ -444,9 +445,9 @@ p, label {
     }
 
     .jl-slider-item {
-        width: 500px;
         height: 500px;
-        display: inline-block;
+        display: block;
+        float: left;
     }
 }
 

@@ -39,4 +39,30 @@ var waypoint = new Waypoint({
         myScrollDown.classList.toggle('jl-fade-out');
     },
     offset: '70%'
-})
+});
+
+//Portfolio Slider
+
+//Variable - Slider
+var sliderContainer = document.querySelector('.jl-slider-container');
+var sliderList = document.querySelector('.jl-slider-list');
+var sliderItem = document.querySelectorAll('.jl-slider-item');
+var sliderListWidth = null;
+
+//Getting individual width
+var containerWidth = sliderContainer.parentElement.offsetWidth;
+
+//Assign dynamic width
+sliderContainer.style.width = containerWidth + 'px';
+
+for (var j = 0; j < sliderItem.length; j++) {
+    sliderItem[j].style.width = containerWidth + 'px';
+
+    var sliderItemWidth = sliderItem[j].offsetWidth;
+    sliderListWidth += sliderItemWidth;
+    console.log(sliderListWidth);
+};
+
+sliderList.style.width = sliderListWidth + 'px';
+
+//Animation Slider onClick
