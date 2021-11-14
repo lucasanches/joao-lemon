@@ -11,6 +11,7 @@ var nextItem = document.querySelector('.jl-item-next');
 var sliderPos = 0;
 var currentSlide = document.querySelector('.jl-current-slide');
 var totalSlide = document.querySelector('.jl-total-slide');
+var currentCounter = 1;
 
 //Getting individual width
 var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -66,13 +67,31 @@ var counterFormater = function (n) {
     }
 }
 
+//Counter add
+var counterAdd = function () {
+    if (currentCounter >= 0 && currentCounter < slideTotalItem) {
+        currentCounter++;
+        currentSlide.innerHTML = counterFormater(currentCounter);
+    }
+}
+
+//Counter remove
+var counterRemove = function () {
+    if (currentCounter > 1 && currentCounter <= slideTotalItem) {
+        currentCounter--
+        currentSlide.innerHTML = counterFormater(currentCounter);
+    }
+}
+
 //Actions
 totalSlide.innerHTML = counterFormater(slideTotalItem);
 
 nextItem.addEventListener('click', function () {
     nextSlideAnim();
+    counterAdd();
 });
 
 prevItem.addEventListener('click', function () {
     prevSlideAnim();
+    counterRemove();
 });
