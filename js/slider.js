@@ -4,7 +4,13 @@
 var sliderContainer = document.querySelector('.jl-slider-container');
 var sliderList = document.querySelector('.jl-slider-list');
 var sliderItem = document.querySelectorAll('.jl-slider-item');
+const slideTotalItem = sliderItem.length;
 var sliderListWidth = null;
+var prevItem = document.querySelector('.jl-item-prev');
+var nextItem = document.querySelector('.jl-item-next');
+var sliderPos = 0;
+var currentSlide = document.querySelector('.jl-current-slide');
+var totalSlide = document.querySelector('.jl-total-slide');
 
 //Getting individual width
 var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -22,9 +28,6 @@ for (var j = 0; j < sliderItem.length; j++) {
 sliderList.style.width = sliderListWidth + 'px';
 
 //Animation Slider onClick
-var prevItem = document.querySelector('.jl-item-prev');
-var nextItem = document.querySelector('.jl-item-next');
-var sliderPos = 0;
 
 //HANDLERS
 var nextSlideAnim = function () {
@@ -53,6 +56,18 @@ var prevSlideAnim = function () {
         translateX: sliderPos
     });
 }
+
+//Counter formater
+var counterFormater = function (n) {
+    if (n < 10) {
+        return '0' + n;
+    } else {
+        return n;
+    }
+}
+
+//Actions
+totalSlide.innerHTML = counterFormater(slideTotalItem);
 
 nextItem.addEventListener('click', function () {
     nextSlideAnim();
