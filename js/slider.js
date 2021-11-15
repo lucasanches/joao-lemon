@@ -91,6 +91,11 @@ var setActiveNav = function () {
 
         if (myNavNum === currentCounter) {
             navItems[n].classList.add('jl-item-active');
+
+            anime({
+                targets: '.jl-item-active',
+                width: 82
+            });
         }
     }
 }
@@ -98,12 +103,22 @@ var setActiveNav = function () {
 var changeActive = function () {
     for (var r = 0; r < navItems.length; r++) {
         navItems[r].classList.remove('jl-item-active');
+
+        anime({
+            targets: navItems[r],
+            width: 20
+        });
     }
     setActiveNav();
 }
 
 //Actions
 totalSlide.innerHTML = counterFormater(slideTotalItem);
+
+anime({
+    targets: '.jl-item-active',
+    width: 82
+});
 
 nextItem.addEventListener('click', function () {
     nextSlideAnim();
