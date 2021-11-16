@@ -13,6 +13,7 @@ var currentSlide = document.querySelector('.jl-current-slide');
 var totalSlide = document.querySelector('.jl-total-slide');
 var currentCounter = 1;
 var navItems = document.querySelectorAll('.jl-item-navigator a');
+var navCounter = document.querySelector('.jl-navigator-counter span')
 
 //Getting individual width
 var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -73,6 +74,7 @@ var counterAdd = function () {
     if (currentCounter >= 0 && currentCounter < slideTotalItem) {
         currentCounter++;
         currentSlide.innerHTML = counterFormater(currentCounter);
+        navCounter.innerHTML = counterFormater(currentCounter);
     }
 }
 
@@ -81,6 +83,7 @@ var counterRemove = function () {
     if (currentCounter > 1 && currentCounter <= slideTotalItem) {
         currentCounter--
         currentSlide.innerHTML = counterFormater(currentCounter);
+        navCounter.innerHTML = counterFormater(currentCounter);
     }
 }
 
