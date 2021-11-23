@@ -43,7 +43,8 @@ var nextSlideAnim = function () {
 
     anime({
         targets: sliderList,
-        translateX: sliderPos
+        translateX: sliderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 }
 
@@ -56,7 +57,8 @@ var prevSlideAnim = function () {
 
     anime({
         targets: sliderList,
-        translateX: sliderPos
+        translateX: sliderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 }
 
@@ -103,6 +105,18 @@ var setActiveNav = function () {
     }
 }
 
+//Set active slide
+var setActiveSlide = function () {
+    for (var s = 0; s < sliderItem.length; s++) {
+        let mySlideNum = parseInt(sliderItem[s].getAttribute('data-slide'));
+
+        if (mySlideNum === currentCounter) {
+            sliderItem[s].classList.add('jl-slide-active');
+            sliderItem[s].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right');
+        }
+    }
+}
+
 var changeActive = function () {
     for (var r = 0; r < navItems.length; r++) {
         navItems[r].classList.remove('jl-item-active');
@@ -112,7 +126,13 @@ var changeActive = function () {
             width: 20
         });
     }
+
+    for (var rm = 0; rm < sliderItem.length; rm++) {
+        sliderItem[rm].classList.remove('jl-slide-active');
+    }
+
     setActiveNav();
+    setActiveSlide();
 }
 
 //Actions
