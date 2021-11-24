@@ -112,7 +112,9 @@ var setActiveSlide = function () {
 
         if (mySlideNum === currentCounter) {
             sliderItem[s].classList.add('jl-slide-active');
-            sliderItem[s].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right');
+            sliderItem[s].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-left');
+            sliderItem[s].querySelector('.jl-portfolio-item-thumb img').classList.add('jl-scale-up');
+            sliderItem[s].querySelector('.jl-portfolio-item-info').classList.add('jl-fade-from-left');
         }
     }
 }
@@ -129,6 +131,9 @@ var changeActive = function () {
 
     for (var rm = 0; rm < sliderItem.length; rm++) {
         sliderItem[rm].classList.remove('jl-slide-active');
+        sliderItem[rm].querySelector('.jl-portfolio-item-box').classList.remove('jl-scale-left');
+        sliderItem[rm].querySelector('.jl-portfolio-item-thumb img').classList.remove('jl-scale-up');
+        sliderItem[rm].querySelector('.jl-portfolio-item-info').classList.remove('jl-fade-from-left');
     }
 
     setActiveNav();
