@@ -479,8 +479,14 @@ p, label {
     .jl-portfolio-item-thumb {
         width: 100%;
         display: table;
-        padding: 62px 0; 
+        padding: 62px 0 14px 0; 
         position: relative;
+    }
+
+    .jl-portfolio-item-thumb > button {
+        margin-top: 10px;
+        float: right;
+        margin-right: 62px;
     }
 
     .jl-portfolio-item-box {
@@ -593,6 +599,15 @@ p, label {
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-out;
+    position: relative;
+}
+
+.jl-btn ion-icon {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: 4px;
 }
 
 .jl-btn-block {
@@ -602,6 +617,7 @@ p, label {
 
 .jl-btn-sm {
     height: 28px;
+    line-height: 28px;
     padding: 0 20px;
     border-radius: 14px;
     font-size: 11px;
@@ -609,6 +625,7 @@ p, label {
 
 .jl-btn-md {
     height: 38px;
+    line-height: 38px;
     padding: 0 27px;
     border-radius: 19px;
     font-size: 14px;
@@ -616,6 +633,7 @@ p, label {
 
 .jl-btn-lg {
     height: 45px;
+    line-height: 45px;
     padding: 0 35px;
     border-radius: 23px;
     font-size: 16px;
