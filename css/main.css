@@ -509,6 +509,12 @@ p, label {
         left: -62px;
         transform: scale(0);
     }
+
+    /*-------- PROJETOS --------*/
+
+    .jl-section-offset-top {
+        margin-top: 130px;
+    }
 }
 
 @media screen and (min-width: 576px){
