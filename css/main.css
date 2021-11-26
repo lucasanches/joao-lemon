@@ -90,6 +90,76 @@ p, label {
     }
 }
 
+/*-------- BUTTONS --------*/
+
+.jl-btn {
+    display: table;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    position: relative;
+}
+
+.jl-btn ion-icon {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: 4px;
+}
+
+.jl-btn-block {
+    width: 100%;
+    display: block;
+}
+
+.jl-btn-sm {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 20px;
+    border-radius: 14px;
+    font-size: 11px;
+}
+
+.jl-btn-md {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+
+.jl-btn-lg {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+.jl-btn-green {
+    background-color: #2ccb69;
+    color: #1c1c1c;
+}
+
+.jl-btn-green:hover {
+    background-color: #068737;
+    color: #fff;
+}
+
+.jl-btn-dark {
+    background-color: #151515;
+    color: #2ccb69;
+}
+
+.jl-btn-dark:hover {
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
 @media screen and (min-width: 320px){
 
     .jl-page-wrapper, .jl-preloader{
@@ -460,14 +530,26 @@ p, label {
         list-style: none;
     }
 
-    .jl-slider-item {
+    .jl-slider-list .jl-btn {
+        transform: scale(0);
+    }
+
+    .jl-portfolio-list {
+        list-style: none;
+    }
+
+    .jl-slider-list .jl-portfolio-item {
         height: 500px;
         display: block;
         float: left;
         margin-top: calc(21vh - 38px);
     }
 
-    .jl-portfolio-item-info {
+    .jl-portfolio-list .jl-portfolio-item {
+        margin-bottom: 100px;
+    }
+
+    .jl-slider-list .jl-portfolio-item-info {
         width: 100%;
         display: table;
         margin-top: 47px;
@@ -476,20 +558,20 @@ p, label {
         left: -200px;
     }
 
-    .jl-portfolio-item-thumb {
+    .jl-slider-list .jl-portfolio-item-thumb, .jl-portfolio-list .jl-portfolio-item-thumb {
         width: 100%;
         display: table;
         padding: 62px 0 14px 0; 
         position: relative;
     }
 
-    .jl-portfolio-item-thumb > button {
+    .jl-slider-list .jl-portfolio-item-thumb > button, .jl-portfolio-list .jl-portfolio-item-thumb > button {
         margin-top: 10px;
         float: right;
         margin-right: 62px;
     }
 
-    .jl-portfolio-item-box {
+    .jl-slider-list .jl-portfolio-item-box, .jl-portfolio-list .jl-portfolio-item-box {
         width: 100%;
         height: 100%;
         display: block;
@@ -501,13 +583,21 @@ p, label {
         transform-origin: right;
     }
 
-    .jl-portfolio-item-thumb img {
+    .jl-portfolio-list .jl-portfolio-item-box {
+        transform: scaleX(1);
+    }
+
+    .jl-slider-list .jl-portfolio-item-thumb img, .jl-portfolio-list .jl-portfolio-item-thumb img {
         width: 100%;
         max-width: 100%;
         height: auto;
         position: relative;
         left: -62px;
         transform: scale(0);
+    }
+
+    .jl-portfolio-list .jl-portfolio-item-thumb img {
+        transform: scale(1);
     }
 
     /*-------- PROJETOS --------*/
@@ -593,76 +683,6 @@ p, label {
         display: block;
         margin-bottom: 80px;
     }  
-}
-
-/*-------- BUTTONS --------*/
-
-.jl-btn {
-    display: table;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    position: relative;
-}
-
-.jl-btn ion-icon {
-    font-size: 18px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -3px;
-    margin-left: 4px;
-}
-
-.jl-btn-block {
-    width: 100%;
-    display: block;
-}
-
-.jl-btn-sm {
-    height: 28px;
-    line-height: 28px;
-    padding: 0 20px;
-    border-radius: 14px;
-    font-size: 11px;
-}
-
-.jl-btn-md {
-    height: 38px;
-    line-height: 38px;
-    padding: 0 27px;
-    border-radius: 19px;
-    font-size: 14px;
-}
-
-.jl-btn-lg {
-    height: 45px;
-    line-height: 45px;
-    padding: 0 35px;
-    border-radius: 23px;
-    font-size: 16px;
-}
-
-.jl-btn-green {
-    background-color: #2ccb69;
-    color: #1c1c1c;
-}
-
-.jl-btn-green:hover {
-    background-color: #068737;
-    color: #fff;
-}
-
-.jl-btn-dark {
-    background-color: #151515;
-    color: #2ccb69;
-}
-
-.jl-btn-dark:hover {
-    background-color: #2f2f2f;
-    color: #fff;
 }
 
 /*-------- UTILITY CLASSES --------*/
