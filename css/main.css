@@ -618,6 +618,23 @@ p, label {
     .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button {
         float: right;
     }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info {
+        margin-left: 94px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row {
+        flex-direction: row-reverse;
+    }
+    
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button {
+        float: left;
+        margin-left: 62px;
+    }
+
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img {
+        left: 62px;
+    }
 }
 
 @media screen and (min-width: 576px){
