@@ -322,7 +322,11 @@ p, label {
         line-height: 24px;
     }
 
-    .jl-social-links {
+    .jl-contact-info-inner .jl-paragraph-sm {
+        font-size: 14px;
+    }
+
+    .jl-social-links, .jl-social-links-circle {
         width: 100%;
         height: 45px;
         display: block;
@@ -331,10 +335,24 @@ p, label {
         margin-top: 7px;
     }
 
-    .jl-social {
+    .jl-social-links-circle {
+        left: 0;
+    }
+
+    .jl-social, .jl-social-links-circle .jl-social {
         width: 45px;
         height: 45px;
         display: inline-block;
+    }
+
+    .jl-social-links-circle .jl-social {
+        border-radius: 50%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .jl-social-links-circle .jl-social ion-icon {
+        height: 45px;
     }
 
     .jl-social > img {
@@ -617,7 +635,7 @@ p, label {
     /*-------- PROJECTS --------*/
 
     .jl-section-offset-top {
-        margin-top: 130px;
+        margin-top: 92px;
     }
 
     .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info {
@@ -766,6 +784,10 @@ p, label {
 
 .jl-title-large {
     font-size: 45px;
+}
+
+.jl-paragraph-sm {
+    font-size: 14px;
 }
 
 .jl-bg-green {
