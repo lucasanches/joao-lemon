@@ -349,10 +349,20 @@ p, label {
         border-radius: 50%;
         text-align: center;
         font-size: 14px;
+        transition: all 0.2s ease-out;
     }
 
     .jl-social-links-circle .jl-social ion-icon {
         height: 45px;
+        transition: all 0.2s ease-out;
+    }
+
+    .jl-social-links-circle .jl-social:hover {
+        background-color: #000;
+    }
+
+    .jl-social-links-circle .jl-social:hover ion-icon {
+        color: #2ccb69;
     }
 
     .jl-social > img {
