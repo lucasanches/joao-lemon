@@ -6,6 +6,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    text-decoration: none;
+}
+
 p, label {
     font-family: 'Open Sans', sans-serif;
 }
@@ -679,6 +683,17 @@ p, label {
     #jl-avatar-about img {
         position: relative;
         left: -15px;
+    }
+
+    /*-------- DETAILS --------*/
+
+    .jl-hero {
+        height: 500px;
+        display: block;
+        background-image: url('../projects/manage-it/img/hero.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 }
 
